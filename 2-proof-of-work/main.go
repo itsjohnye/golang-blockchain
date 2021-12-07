@@ -3,7 +3,9 @@ package main
 
 import (
 	"fmt"
-	"github/itsjohnye/golang-blickchain/2-proof-of-work/blockchain"
+	"strconv"
+
+	"github.com/itsjohnye/golang-blockchain/2-proof-of-work/blockchain"
 )
 
 func main() {
@@ -16,6 +18,10 @@ func main() {
 		fmt.Printf("Previous Hash: %x\n", block.PreviousHash)
 		fmt.Printf("Data in Block: %s\n", block.Data)
 		fmt.Printf("Hash: %x\n", block.Hash)
+
+		pow := blockchain.NewProof(block)
+		fmt.Printf("PoW: %s\n", strconv.FormatBool(pow.Validate()))
+		fmt.Println()
 	}
 
 }
