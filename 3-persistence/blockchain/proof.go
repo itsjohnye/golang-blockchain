@@ -18,7 +18,7 @@ import (
 // Requirements:
 // The First few bytes must contain 0s
 
-const Difficulty = 16 // means how many zeros we want in the beginning of the hash byte, the difficulty will dynamically increase in reallity
+const Difficulty = 12 // means how many zeros we want in the beginning of the hash byte, the difficulty will dynamically increase in reallity
 
 type ProofOfWork struct {
 	Block  *Block
